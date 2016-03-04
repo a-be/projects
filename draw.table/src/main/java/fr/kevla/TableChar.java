@@ -167,7 +167,7 @@ public class TableChar {
 			topChar= instance.LIGHT_HORIZONTAL;
 		}
 
-		return Strings.repeat(topChar, 15);
+		return Strings.repeat(topChar, corner.getWidth());
 
 
 	}

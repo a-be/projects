@@ -78,6 +78,12 @@ public class Corner {
 	public void setStyle(int style) {
 		this.style = style;
 	}
+	
+	public void addStyle(int style) {
+		this.style |= style;
+	}
+	
+	
 
 	public  boolean checkStyle(int style){
 		return (this.getStyle()&style)==style;
