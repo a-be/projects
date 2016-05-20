@@ -8,46 +8,49 @@ import com.google.common.base.Strings;
 public class TableChar {
 
 
-	private final String LIGHT_HORIZONTAL="─";
-	private final String LIGHT_VERTICAL="│";
-	private final String LIGHT_DOWN_RIGHT="┌";
-	private final String LIGHT_DOWN_LEFT="┐";
-	private final String LIGHT_UP_RIGHT="└";
-	private final String LIGHT_UP_LEFT="┘";
-	private final String LIGHT_VERTICAL_RIGHT="├";
-	private final String LIGHT_VERTICAL_LEFT="┤";
-	private final String LIGHT_DOWN_HORIZONTAL="┬";
-	private final String LIGHT_UP_HORIZONTAL="┴";
-	private final String LIGHT_VERTICAL_HORIZONTAL="┼";
-	private final String DOUBLE_HORIZONTAL="═";
-	private final String DOUBLE_VERTICAL="║";
-	private final String DOWN_SINGLE_RIGHT_DOUBLE="╒";
-	private final String DOWN_DOUBLE_RIGHT_SINGLE="╓";
-	private final String DOUBLE_DOWN_RIGHT="╔";
-	private final String DOWN_SINGLE_LEFT_DOUBLE="╕";
-	private final String DOWN_DOUBLE_LEFT_SINGLE="╖";
-	private final String DOUBLE_DOWN_LEFT="╗";
-	private final String UP_SINGLE_RIGHT_DOUBLE="╘";
-	private final String UP_DOUBLE_RIGHT_SINGLE="╙";
-	private final String DOUBLE_UP_RIGHT="╚";
-	private final String UP_SINGLE_LEFT_DOUBLE="╛";
-	private final String UP_DOUBLE_LEFT_SINGLE="╜";
-	private final String DOUBLE_UP_LEFT="╝";
-	private final String VERTICAL_SINGLE_RIGHT_DOUBLE="╞";
-	private final String VERTICAL_DOUBLE_RIGHT_SINGLE="╟";
-	private final String DOUBLE_VERTICAL_RIGHT="╠";
-	private final String VERTICAL_SINGLE_LEFT_DOUBLE="╡";
-	private final String VERTICAL_DOUBLE_LEFT_SINGLE="╢";
-	private final String DOUBLE_VERTICAL_LEFT="╣";
-	private final String DOWN_SINGLE_HORIZONTAL_DOUBLE="╤";
-	private final String DOWN_DOUBLE_HORIZONTAL_SINGLE="╥";
-	private final String DOUBLE_DOWN_HORIZONTAL="╦";
-	private final String UP_SINGLE_HORIZONTAL_DOUBLE="╧";
-	private final String UP_DOUBLE_HORIZONTAL_SINGLE="╨";
-	private final String DOUBLE_UP_HORIZONTAL="╩";
-	private final String VERTICAL_SINGLE_HORIZONTAL_DOUBLE="╪";
-	private final String VERTICAL_DOUBLE_HORIZONTAL_SINGLE="╫";
-	private final String DOUBLE_VERTICAL_HORIZONTAL="╬";
+	public static final String LIGHT_HORIZONTAL="─";
+	public static final String LIGHT_VERTICAL="│";
+	public static final String LIGHT_DOWN_RIGHT="┌";
+	public static final String LIGHT_DOWN_LEFT="┐";
+	public static final String LIGHT_UP_RIGHT="└";
+	public static final String LIGHT_UP_LEFT="┘";
+	public static final String LIGHT_VERTICAL_RIGHT="├";
+	public static final String LIGHT_VERTICAL_LEFT="┤";
+	public static final String LIGHT_DOWN_HORIZONTAL="┬";
+	public static final String LIGHT_UP_HORIZONTAL="┴";
+	public static final String LIGHT_VERTICAL_HORIZONTAL="┼";
+	public static final String DOUBLE_HORIZONTAL="═";
+	public static final String DOUBLE_VERTICAL="║";
+	public static final String DOWN_SINGLE_RIGHT_DOUBLE="╒";
+	public static final String DOWN_DOUBLE_RIGHT_SINGLE="╓";
+	public static final String DOUBLE_DOWN_RIGHT="╔";
+	public static final String DOWN_SINGLE_LEFT_DOUBLE="╕";
+	public static final String DOWN_DOUBLE_LEFT_SINGLE="╖";
+	public static final String DOUBLE_DOWN_LEFT="╗";
+	public static final String UP_SINGLE_RIGHT_DOUBLE="╘";
+	public static final String UP_DOUBLE_RIGHT_SINGLE="╙";
+	public static final String DOUBLE_UP_RIGHT="╚";
+	public static final String UP_SINGLE_LEFT_DOUBLE="╛";
+	public static final String UP_DOUBLE_LEFT_SINGLE="╜";
+	public static final String DOUBLE_UP_LEFT="╝";
+	public static final String VERTICAL_SINGLE_RIGHT_DOUBLE="╞";
+	public static final String VERTICAL_DOUBLE_RIGHT_SINGLE="╟";
+	public static final String DOUBLE_VERTICAL_RIGHT="╠";
+	public static final String VERTICAL_SINGLE_LEFT_DOUBLE="╡";
+	public static final String VERTICAL_DOUBLE_LEFT_SINGLE="╢";
+	public static final String DOUBLE_VERTICAL_LEFT="╣";
+	public static final String DOWN_SINGLE_HORIZONTAL_DOUBLE="╤";
+	public static final String DOWN_DOUBLE_HORIZONTAL_SINGLE="╥";
+	public static final String DOUBLE_DOWN_HORIZONTAL="╦";
+	public static final String UP_SINGLE_HORIZONTAL_DOUBLE="╧";
+	public static final String UP_DOUBLE_HORIZONTAL_SINGLE="╨";
+	public static final String DOUBLE_UP_HORIZONTAL="╩";
+	public static final String VERTICAL_SINGLE_HORIZONTAL_DOUBLE="╪";
+	public static final String VERTICAL_DOUBLE_HORIZONTAL_SINGLE="╫";
+	public static final String DOUBLE_VERTICAL_HORIZONTAL="╬";
+
+	
+	
 
 	private Map<Integer,String> map;
 
@@ -162,9 +165,9 @@ public class TableChar {
 	public static String resolveTopChar(Corner corner) {
 		String topChar=" ";
 		if(corner.checkStyle(Corner.RIGTH_D)){
-			topChar= instance.DOUBLE_HORIZONTAL;
+			topChar= DOUBLE_HORIZONTAL;
 		}else if(corner.checkStyle(Corner.RIGTH)){
-			topChar= instance.LIGHT_HORIZONTAL;
+			topChar= LIGHT_HORIZONTAL;
 		}
 
 		return Strings.repeat(topChar, corner.getWidth());
@@ -173,9 +176,9 @@ public class TableChar {
 	}
 	public static String resolveLeftChar(Corner corner) {
 		if(corner.checkStyle(Corner.BOTTUM_D)){
-			return instance.DOUBLE_VERTICAL;
+			return DOUBLE_VERTICAL;
 		}else if(corner.checkStyle(Corner.BOTTUM)){
-			return instance.LIGHT_VERTICAL;
+			return LIGHT_VERTICAL;
 		}else{
 			return " ";
 

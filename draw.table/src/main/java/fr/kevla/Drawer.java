@@ -12,6 +12,24 @@ public class Drawer {
 		adjustWidth(elements);
 		printElement(elements);
 	}
+	
+	public static void printDoubleLine(int length){
+		printLine(length,TableChar.DOUBLE_HORIZONTAL);
+	}
+	
+	public static void printLightLine(int length){
+		printLine(length,TableChar.LIGHT_HORIZONTAL);
+	}
+	
+	public static void printLine(int length,String chara){
+		StringBuilder builder=new StringBuilder();
+		for(int i=0;i<length;i++){
+			builder.append(chara);
+		}
+		System.out.println(builder);
+	}
+	
+	
 	private List<List<Corner>>parseCorners(String text){
 		List<List<Corner>> elements=new ArrayList<List<Corner>>();
 
